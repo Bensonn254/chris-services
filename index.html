@@ -262,18 +262,19 @@
             <div class="contact-card">
                 <h3>Send Details</h3>
                 <p>Prefer a form? Tell us about your event</p>
-                <form class="contact-form" onsubmit="alert('Form submission would be processed here'); return false;">
-                    <input type="text" placeholder="Your Name *" required>
-                    <input type="tel" placeholder="Phone Number *" required>
-                    <input type="date" placeholder="Event Date" required>
-                    <select required>
+                <form name="contact" method="POST" data-netlify="true" class="contact-form" id="contact-form">
+                    <input type="hidden" name="form-name" value="contact">
+                    <input type="text" name="name" placeholder="Your Name *" required>
+                    <input type="tel" name="phone" placeholder="Phone Number *" required>
+                    <input type="date" name="date" placeholder="Event Date" required>
+                    <select name="guest-count" required>
                         <option value="">Guest Count</option>
                         <option>10-30 guests</option>
                         <option>30-50 guests</option>
                         <option>50-100 guests</option>
                         <option>100+ guests</option>
                     </select>
-                    <select required>
+                    <select name="event-type" required>
                         <option value="">Event Type</option>
                         <option>Wedding</option>
                         <option>Corporate Event</option>
@@ -281,9 +282,13 @@
                         <option>Private Dinner</option>
                         <option>Other</option>
                     </select>
-                    <textarea placeholder="Tell us about your event..."></textarea>
+                    <textarea name="message" placeholder="Tell us about your event..."></textarea>
                     <button type="submit" class="btn-primary" style="width: 100%;">Send Inquiry</button>
                 </form>
+                <div id="success-message" style="display: none; background-color: #d4edda; color: #155724; padding: 1rem; border-radius: 5px; margin-top: 1rem; text-align: center;">
+                    <h4>✅ Thank you for your inquiry!</h4>
+                    <p>We've received your message and will contact you within 2 hours.</p>
+                </div>
             </div>
         </div>
 
@@ -405,6 +410,27 @@
                 }
             });
         });
+
+        // Handle contact form submission
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show success message
+                successMessage.style.display = 'block';
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            });
+        }
     </script>
 </body>
 </html>
