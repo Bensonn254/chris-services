@@ -1,87 +1,71 @@
-# Chef Chris - Professional Catering Services
+# Chef Chrispine Catering Website
 
-A modern, responsive portfolio website for Chef Chrispine's professional catering and private chef services.
+A modern, responsive portfolio site for Chef Chrispine's catering and private chef services in Nairobi.
 
-## 🍽️ Services
+## Features
 
-- **Outside Catering** - Weddings, birthdays, corporate events, and celebrations
-- **Private Chef Services** - Intimate home dinners and small gatherings  
-- **Custom Menus** - Tailored to budget, dietary needs, and event themes
-- **Live Cooking Stations** - Interactive culinary experiences
+- Responsive layout for desktop, tablet, and mobile
+- Hero slideshow and gallery
+- Signature dishes section
+- FAQ with accessible toggles
+- WhatsApp and call-to-book CTAs
+- Netlify form with honeypot and thank-you page
+- Cookie preferences panel with analytics consent control
+- Clean URLs like `/services` and `/contact`
 
-## ✨ Features
+## Tech Stack
 
-- **Responsive Design** - Works perfectly on desktop, tablet, and mobile
-- **Modern UI/UX** - Clean, elegant design with smooth animations
-- **Hero Slideshow** - Dynamic image gallery showcasing culinary work
-- **Contact Forms** - Easy inquiry and WhatsApp integration
-- **Gallery Section** - Visual portfolio of catering events
-- **FAQ Section** - Common questions answered
-- **Service Pricing** - Transparent pricing information
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
-## 🛠️ Technologies Used
+## Local Development (Clean URLs)
 
-- **HTML5** - Semantic, accessible markup
-- **CSS3** - Modern styling with animations and transitions
-- **JavaScript** - Interactive features and smooth scrolling
-- **Responsive Grid Layout** - Mobile-first design approach
+Clean URLs need a server that falls back to `index.html`.
 
-## 🎨 Design Features
+```bash
+npm run dev
+```
 
-- **Color Scheme**: Olive green, champagne, and ecru tones
-- **Typography**: Georgia serif for elegant, professional feel
-- **Animations**: Smooth hover effects and transitions
-- **Accessibility**: Semantic HTML and keyboard navigation support
+This starts a small local server on `http://127.0.0.1:5501` that supports `/home`, `/gallery`, etc.
 
-## 📱 Sections
+Note: If you use Live Server and refresh a clean URL, you may get a 404. The dev server fixes that.
 
-1. **Hero Section** - Eye-catching introduction with slideshow
-2. **Statistics** - Showcase of experience and success
-3. **Gallery** - Visual portfolio of food and events
-4. **Services** - Detailed service offerings with pricing
-5. **About** - Professional background and credentials
-6. **Contact** - Multiple contact methods and inquiry form
-7. **Footer** - Social links and navigation
+## Deployment (Netlify)
 
-## 🚀 Getting Started
+Netlify clean URLs are handled by the `_redirects` file:
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/Bensonn254/chris-services.git
-   ```
+```
+/*    /index.html   200
+```
 
-2. Navigate to the project directory:
-   ```bash
-   cd chris-services
-   ```
+Make sure this file is deployed so `/contact` and other paths resolve properly.
 
-3. Open `index.html` in your web browser
+## Forms
 
-## 📞 Contact Information
+The contact form uses Netlify Forms. Submissions appear in the Netlify dashboard.
 
-- **Phone**: +254 715 988 031
-- **Email**: chrispinearoko@gmail.com
-- **Location**: Nairobi, Kenya
-- **WhatsApp**: Direct integration for quick inquiries
+Form success redirects to:
 
-## 📍 Service Area
+- `thank-you.html`
 
-- Primary: Nairobi and surrounding counties
-- Available for travel to other locations (additional arrangements may apply)
+## Customization
 
-## ⚡ Performance
+- Update social links and phone in `index.html`
+- Update menu items in the Signature Dishes section
+- Replace images in `images/`
+- Update Google Analytics ID in the `gtag.js` block
+- Update Open Graph tags if the domain or share image changes
 
-- **Optimized Images** - Compressed for fast loading
-- **Minimal Dependencies** - No heavy frameworks
-- **SEO Friendly** - Semantic HTML and proper meta tags
-- **Mobile Optimized** - Responsive design for all devices
+## Project Files
 
-## 📄 License
+- `index.html` - Main page
+- `styles.css` - Global styles
+- `thank-you.html` - Form confirmation page
+- `server.js` - Local dev server with SPA fallback
+- `_redirects` - Netlify clean URL routing
+- `favicon.svg`, `icon-192.svg`, `icon-512.svg` - App icons
 
-© 2026 Chrispine Catering. All rights reserved.
-Licensed & Insured • Fresh Ingredients • Exceptional Service
+## License
 
----
-
-**Professional Chef & Catering Services**
-*Serving Nairobi & Beyond • 100+ Events Catered*
+Copyright 2026 Chrispine Catering. All rights reserved.

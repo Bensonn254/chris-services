@@ -4,54 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chrispine - Professional Chef & Catering Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Chef Chrispine provides premium catering and private chef services in Nairobi. Book weddings, corporate events, and private dinners with custom menus.">
+    <meta name="keywords" content="chef, catering, private chef, Nairobi, weddings, corporate events, outside catering, custom menus">
+    <meta name="author" content="Chef Chrispine">
+    <meta property="og:title" content="Chef Chrispine - Professional Chef & Catering Services">
+    <meta property="og:description" content="Premium catering and private chef services for events in Nairobi. Custom menus, live cooking stations, and exceptional service.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chris-services.netlify.app/">
+    <meta property="og:image" content="https://chris-services.netlify.app/images/chef-chris-1.jpeg">
+    <meta property="og:image:alt" content="Chef Chrispine catering setup">
+    <meta property="og:site_name" content="Chrispine Catering">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chef Chrispine - Professional Chef & Catering Services">
+    <meta name="twitter:description" content="Book Chef Chrispine for weddings, corporate events, and private dinners in Nairobi.">
+    <meta name="twitter:image" content="https://chris-services.netlify.app/images/chef-chris-1.jpeg">
+    <meta name="theme-color" content="#6F6134">
+    <base href="/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/styles.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMBCX8C9KE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted'
+      });
       gtag('config', 'G-PMBCX8C9KE');
     </script>
 </head>
 <body>
     <nav>
         <div class="container">
-            <a href="#home" class="logo">
+            <a href="/home" class="logo" data-target="home">
                 <img src="images/chef-chris-logo.jpg" alt="Chrispine">
             </a>
-            <div class="nav-toggle" id="nav-toggle">
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="nav-menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="/home" data-target="home">Home</a></li>
+                <li><a href="/services" data-target="services">Services</a></li>
+                <li><a href="/gallery" data-target="gallery">Gallery</a></li>
+                <li><a href="/about" data-target="about">About</a></li>
+                <li><a href="/contact" data-target="contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-slideshow">
-            <img src="images/chef-chris-1.jpeg" alt="Chef Chrispine" class="hero-slide">
-            <img src="images/chef-chris-2.jpeg" alt="Chef Chrispine" class="hero-slide">
-            <img src="images/chef-chris-3.jpeg" alt="Chef Chrispine" class="hero-slide">
-            <img src="images/chef-chris-4.jpeg" alt="Chef Chrispine" class="hero-slide">
+            <img src="images/chef-chris-1.jpeg" alt="Chef Chrispine presenting a plated dish" class="hero-slide" width="1600" height="900">
+            <img src="images/chef-chris-2.jpeg" alt="Chef Chrispine in the kitchen preparing a meal" class="hero-slide" width="1600" height="900">
+            <img src="images/chef-chris-3.jpeg" alt="Chef Chrispine catering an event setup" class="hero-slide" width="1600" height="900">
+            <img src="images/chef-chris-4.jpeg" alt="Chef Chrispine with a gourmet spread" class="hero-slide" width="1600" height="900">
         </div>
         <div class="hero-content">
             <h1>Chef Chris</h1>
             <p>Professional Chef & Caterer</p>
             <p class="subtitle">Outside catering, private events & custom menus</p>
             <div>
-                <a href="#contact" class="btn-primary">Book for an Event</a>
-                <a href="#gallery" class="btn-secondary">View Menu & Gallery</a>
+                <a href="/contact" class="btn-primary" data-target="contact">Book for an Event</a>
+                <a href="/gallery" class="btn-secondary" data-target="gallery">View Menu & Gallery</a>
             </div>
-            <p style="margin-top: 2rem; font-size: 0.95rem;">Serving Nairobi & Beyond • 100+ Events Catered</p>
+            <p class="hero-tagline">Serving Nairobi & Beyond • 100+ Events Catered</p>
         </div>
     </section>
 
@@ -78,48 +101,63 @@
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Buffet Setup">
+                <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" alt="Corporate buffet setup for guests" loading="lazy" width="600" height="400">
                 <div class="gallery-caption">Corporate Event Buffet • 150 Guests</div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=600&q=80" alt="Plated Dish">
+                <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=600&q=80" alt="Premium plated dinner with garnish" loading="lazy" width="600" height="400">
                 <div class="gallery-caption">Premium Plated Dinner</div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" alt="Wedding Catering">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" alt="Wedding reception buffet spread" loading="lazy" width="600" height="400">
                 <div class="gallery-caption">Wedding Reception • 200 Guests</div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80" alt="Gourmet Meal">
+                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80" alt="Gourmet entree with fresh herbs" loading="lazy" width="600" height="400">
                 <div class="gallery-caption">Gourmet Selection</div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80" alt="Desserts">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80" alt="Dessert table with pastries and fruit" loading="lazy" width="600" height="400">
                 <div class="gallery-caption">Dessert Table Selection</div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1556910110-a5a63dfd393c?w=600&q=80" alt="Live Cooking">
+                <img src="https://images.unsplash.com/photo-1556910110-a5a63dfd393c?w=600&q=80" alt="Live cooking station with chef" loading="lazy" width="600" height="400">
                 <div class="gallery-caption">Live Cooking Station</div>
             </div>
         </div>
-        
-        <!-- Instagram Feed Section -->
-        <div style="margin-top: 3rem; text-align: center;">
-            <h3 style="color: var(--olive); margin-bottom: 2rem; font-size: 1.8rem;">📸 Follow on Instagram</h3>
-            <p style="margin-bottom: 2rem; color: var(--text-dark);">See our latest culinary creations and event highlights</p>
-            <div class="sk-instagram-feed" data-embed-id="25642903"></div>
-            <script src="https://widgets.sociablekit.com/instagram-feed/widget.js" defer></script>
-            <style>
-                /* Hide SociableKit attribution links */
-                .sk-instagram-feed a[href*="sociablekit.com"],
-                .sk-instagram-feed .sk-attribution,
-                .sk-instagram-feed .sk-powered-by,
-                .sk-instagram-feed [class*="attribution"],
-                .sk-instagram-feed [class*="powered"] {
-                    display: none !important;
-                }
-            </style>
+
+        <div class="instagram-follow">
+            <a href="https://instagram.com/chrisgoraroko254" class="instagram-link" target="_blank" rel="noopener">
+                <span class="instagram-icon">📸</span>
+                <span>Follow on Instagram</span>
+                <span class="instagram-handle">@chrisgoraroko254</span>
+            </a>
         </div>
+        
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Signature Dishes</h2>
+        <p class="section-subtitle">A sample of crowd favorites I can prepare</p>
+        <div class="menu-highlights">
+            <div class="menu-card">
+                <h3>Herb-Roasted Chicken</h3>
+                <p>Served with garlic mash, seasonal vegetables, and rich pan jus.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Swahili Coconut Fish Curry</h3>
+                <p>Fresh catch simmered in coconut sauce with fragrant spices.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Beef Pilau & Kachumbari</h3>
+                <p>Classic spiced pilau paired with crisp tomato-onion salad.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Mini Dessert Trio</h3>
+                <p>Assorted mousse cups, fruit tarts, and chocolate bites.</p>
+            </div>
+        </div>
+        <p class="menu-note">Custom menus are available for dietary needs, budgets, and event themes.</p>
     </section>
 
     <section class="section">
@@ -140,30 +178,31 @@
                 <h3>Outside Catering</h3>
                 <p>Weddings, birthdays, corporate events, and celebrations of all sizes</p>
                 <div class="price-hint">From KES 1,200/head</div>
-                <a href="#contact" class="btn-small">Request Quote</a>
+                <a href="/contact" class="btn-small" data-target="contact">Request Quote</a>
             </div>
             <div class="service-card">
                 <div class="service-icon">👨‍🍳</div>
                 <h3>Private Chef Services</h3>
                 <p>Intimate home dinners and small gatherings with personalized menus</p>
                 <div class="price-hint">From KES 350/head</div>
-                <a href="#contact" class="btn-small">Request Quote</a>
+                <a href="/contact" class="btn-small" data-target="contact">Request Quote</a>
             </div>
             <div class="service-card">
                 <div class="service-icon">📋</div>
                 <h3>Custom Menus</h3>
                 <p>Tailored to your budget, dietary needs, and event theme</p>
                 <div class="price-hint">Custom Pricing</div>
-                <a href="#contact" class="btn-small">Request Quote</a>
+                <a href="/contact" class="btn-small" data-target="contact">Request Quote</a>
             </div>
             <div class="service-card">
                 <div class="service-icon">🔥</div>
                 <h3>Live Cooking Stations</h3>
                 <p>Interactive culinary experiences that wow your guests</p>
                 <div class="price-hint">Add-on Service</div>
-                <a href="#contact" class="btn-small">Request Quote</a>
+                <a href="/contact" class="btn-small" data-target="contact">Request Quote</a>
             </div>
         </div>
+        <p class="service-note">Minimum order: 20 guests • Service area: Nairobi & surrounding counties</p>
     </section>
 
     <section class="section">
@@ -173,7 +212,7 @@
         <div class="how-it-works">
             <div class="step">
                 <div class="step-number">1</div>
-                <h3>Tell Us Your Event Details</h3>
+                <h3>Tell Me Your Event Details</h3>
                 <p>Share your date, location, guest count, and preferences</p>
             </div>
             <div class="step">
@@ -187,14 +226,14 @@
                 <p>Sit back and enjoy exceptional food and service</p>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 2rem; color: var(--olive); font-weight: bold;">
+        <p class="response-time">
             Average response time: 2 hours
         </p>
     </section>
 
     <section id="about" class="section section-alt">
         <div class="about-section">
-            <img src="images/chef-chris.jpeg" alt="Chef Chrispine" class="about-image">
+            <img src="images/chef-chris.jpeg" alt="Chef Chrispine serving at an event" class="about-image" loading="lazy" width="600" height="400">
             <div class="about-text">
                 <h2>About Chrispine</h2>
                 <p>With over 5 years of culinary experience, Chef Chrispine brings passion, creativity, and precision to every event. Specializing in fusion cuisine that blends international techniques with local flavors, he creates memorable dining experiences that leave lasting impressions.</p>
@@ -213,47 +252,47 @@
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div class="faq">
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a-1">
                     How far in advance should I book?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    For best availability, we recommend booking 4-6 weeks in advance. However, we can often accommodate last-minute bookings depending on our schedule. Contact us to check availability.
+                    <span aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a-1" role="region" aria-hidden="true">
+                    For best availability, I recommend booking 4-6 weeks in advance. However, I can often accommodate last-minute bookings depending on my schedule. Contact me to check availability.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a-2">
                     Do you accommodate dietary restrictions?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Absolutely! We cater to all dietary needs including vegetarian, vegan, gluten-free, halal, and any specific allergies. Just let us know your requirements when booking.
+                    <span aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a-2" role="region" aria-hidden="true">
+                    Absolutely! I cater to all dietary needs including vegetarian, vegan, gluten-free, halal, and any specific allergies. Just let me know your requirements when booking.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a-3">
                     What's included in your catering service?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Our full-service catering includes menu planning, food preparation, setup, serving staff (for larger events), and cleanup. We also provide serving equipment and table settings as needed.
+                    <span aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a-3" role="region" aria-hidden="true">
+                    My full-service catering includes menu planning, food preparation, setup, serving staff (for larger events), and cleanup. I also provide serving equipment and table settings as needed.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a-4">
                     What areas do you serve?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    We primarily serve Nairobi and surrounding counties. For events outside this area, please contact us to discuss travel arrangements.
+                    <span aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a-4" role="region" aria-hidden="true">
+                    I primarily serve Nairobi and surrounding counties. For events outside this area, please contact me to discuss travel arrangements.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-a-5">
                     What's your cancellation policy?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
+                    <span aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-a-5" role="region" aria-hidden="true">
                     Cancellations made 14+ days before the event receive a full refund minus booking fee. Cancellations within 7-14 days receive 50% refund. Less than 7 days notice is non-refundable.
                 </div>
             </div>
@@ -274,14 +313,18 @@
                     </svg>
                     Chat on WhatsApp
                 </a>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">Usually responds in under 2 hours</p>
+                <a href="tel:+254715988031" class="call-btn">Book a Call</a>
+                <p class="contact-note">Usually responds in under 2 hours</p>
             </div>
             
             <div class="contact-card">
                 <h3>Send Details</h3>
-                <p>Prefer a form? Tell us about your event</p>
-                <form name="contact" method="POST" data-netlify="true" class="contact-form" id="contact-form">
+                <p>Prefer a form? Tell me about your event</p>
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="contact-form" id="contact-form">
                     <input type="hidden" name="form-name" value="contact">
+                    <p class="sr-only">
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
                     <input type="text" name="name" placeholder="Your Name *" required>
                     <input type="tel" name="phone" placeholder="Phone Number *" required>
                     <input type="date" name="date" placeholder="Event Date" required>
@@ -300,80 +343,123 @@
                         <option>Private Dinner</option>
                         <option>Other</option>
                     </select>
-                    <textarea name="message" placeholder="Tell us about your event..."></textarea>
-                    <button type="submit" class="btn-primary" style="width: 100%;">Send Inquiry</button>
+                    <textarea name="message" placeholder="Tell me about your event..."></textarea>
+                    <p class="privacy-note">By submitting, you agree to be contacted about your event. Your details are never shared.</p>
+                    <button type="submit" class="btn-primary btn-full">Send Inquiry</button>
                 </form>
-                <div id="success-message" style="display: none; background-color: #d4edda; color: #155724; padding: 1rem; border-radius: 5px; margin-top: 1rem; text-align: center;">
-                    <h4>✅ Thank you for your inquiry!</h4>
-                    <p>We've received your message and will contact you within 2 hours.</p>
-                </div>
             </div>
         </div>
 
-        <div style="margin-top: 2rem;">
-            <p style="font-size: 1.1rem;"><strong>Direct Contact:</strong></p>
+        <div class="contact-direct">
+            <p class="contact-direct-title"><strong>Direct Contact:</strong></p>
             <p>📞 +254 715 988 031</p>
             <p>📧 chrispinearoko@gmail.com</p>
             <p>📍 Nairobi, Kenya</p>
+            <p>
+                <a href="https://instagram.com/chrisgoraroko254" class="instagram-contact" target="_blank" rel="noopener">
+                    <span class="instagram-icon">📸</span>
+                    <span>@chrisgoraroko254</span>
+                </a>
+            </p>
         </div>
     </section>
 
     <footer>
         <div class="footer-content">
-            <a href="#home" class="logo" style="font-size: 2rem; margin-bottom: 0;">
-                <img src="images/chef-chris-logo.jpg" alt="Chrispine" style="height: 60px; width: auto; filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); border-radius: 8px;">
+            <a href="/home" class="logo footer-logo" data-target="home">
+                <img src="images/chef-chris-logo.jpg" alt="Chrispine" class="footer-logo-img">
             </a>
             <p>Professional Chef & Catering Services</p>
             
-            <div class="social-links">
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="WhatsApp">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 9.89-5.335 9.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                    </svg>
-                </a>
-            </div>
+            <p class="footer-instagram">
+                Instagram:
+                <a href="https://instagram.com/chrisgoraroko254" target="_blank" rel="noopener">@chrisgoraroko254</a>
+            </p>
             
             <div class="footer-links">
-                <a href="#services">Services</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="/services" data-target="services">Services</a>
+                <a href="/gallery" data-target="gallery">Gallery</a>
+                <a href="/about" data-target="about">About</a>
+                <a href="/contact" data-target="contact">Contact</a>
             </div>
             
-            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+            <p class="footer-meta">
                 &copy; 2026 Chrispine Catering. All rights reserved.<br>
                 Licensed & Insured • Fresh Ingredients • Exceptional Service
             </p>
         </div>
     </footer>
 
-    <a href="https://wa.me/254715988031?text=Hi%20Chrispine,%20I'm%20interested%20in%20catering%20for%20my%20event" class="mobile-whatsapp" title="Chat on WhatsApp">
+    <div class="mobile-cta">
+        <a href="/contact" data-target="contact">Request a Quote</a>
+    </div>
+
+    <a href="https://wa.me/254715988031?text=Hi%20Chrispine,%20I'm%20interested%20in%20catering%20for%20my%20event" class="mobile-whatsapp" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 9.89-5.335 9.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
     </a>
 
+    <div class="cookie-notice" id="cookie-notice" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+        <div class="cookie-card">
+            <div class="cookie-header">
+                <h3 id="cookie-title">Cookie Preferences</h3>
+                <p id="cookie-desc">I use cookies to improve your experience and measure performance. Choose what you're OK with.</p>
+            </div>
+            <div class="cookie-options">
+                <label class="cookie-option">
+                    <span class="cookie-option-text">
+                        <span class="cookie-option-title">Necessary cookies</span>
+                        <span class="cookie-option-desc">Always on. Needed for the site to function.</span>
+                    </span>
+                    <input type="checkbox" checked disabled>
+                </label>
+                <label class="cookie-option">
+                    <span class="cookie-option-text">
+                        <span class="cookie-option-title">Analytics cookies</span>
+                        <span class="cookie-option-desc">Help me understand traffic and improve the site.</span>
+                    </span>
+                    <input type="checkbox" id="cookie-analytics">
+                </label>
+                <label class="cookie-option">
+                    <span class="cookie-option-text">
+                        <span class="cookie-option-title">Marketing cookies</span>
+                        <span class="cookie-option-desc">Used to measure ad performance and reach.</span>
+                    </span>
+                    <input type="checkbox" id="cookie-marketing">
+                </label>
+            </div>
+            <div class="cookie-actions">
+                <button type="button" class="cookie-btn ghost" id="cookie-reject">Reject Optional</button>
+                <button type="button" class="cookie-btn" id="cookie-save">Save Preferences</button>
+                <button type="button" class="cookie-btn primary" id="cookie-accept">Accept All</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
 
-        navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                const isActive = navToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                navToggle.setAttribute('aria-expanded', isActive);
+            });
+        }
 
-        document.querySelectorAll('.nav-menu a').forEach(link => {
+        document.querySelectorAll('.nav-menu a[data-target]').forEach(link => {
             link.addEventListener('click', () => {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
         // Active nav link on scroll
         const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-menu a');
+        const navLinks = document.querySelectorAll('.nav-menu a[data-target]');
 
         function highlightNavLink() {
             const scrollY = window.pageYOffset;
@@ -389,7 +475,7 @@
                         link.style.setProperty('--underline-width', '0');
                     });
 
-                    const activeLink = document.querySelector(`.nav-menu a[href="#${sectionId}"]`);
+                    const activeLink = document.querySelector(`.nav-menu a[data-target="${sectionId}"]`);
                     if (activeLink) {
                         activeLink.style.opacity = '1';
                         activeLink.style.setProperty('--underline-width', '100%');
@@ -413,40 +499,134 @@
         `;
         document.head.appendChild(style);
 
-        // Smooth scrolling for logo links
-        document.querySelectorAll('.logo').forEach(logo => {
-            logo.addEventListener('click', (e) => {
+        function scrollToSection(targetId, pushState = true) {
+            const targetSection = document.getElementById(targetId);
+            if (!targetSection) return;
+
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+            if (pushState) {
+                window.history.pushState({}, '', `/${targetId}`);
+            }
+        }
+
+        // Smooth scrolling for internal links with clean paths
+        document.querySelectorAll('a[data-target]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('data-target');
+                if (!targetId) return;
+
                 e.preventDefault();
-                const targetId = logo.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                scrollToSection(targetId);
             });
         });
 
-        // Handle contact form submission
-        const contactForm = document.getElementById('contact-form');
-        const successMessage = document.getElementById('success-message');
-        
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Show success message
-                successMessage.style.display = 'block';
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 5000);
+        function handlePathScroll() {
+            const path = window.location.pathname.replace(/^\/+/, '').toLowerCase();
+            if (!path) return;
+            scrollToSection(path, false);
+        }
+
+        window.addEventListener('popstate', handlePathScroll);
+        handlePathScroll();
+
+        // FAQ toggle with accessible buttons
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const button = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+
+            if (!button || !answer) return;
+
+            button.addEventListener('click', () => {
+                const isActive = item.classList.toggle('active');
+                button.setAttribute('aria-expanded', isActive);
+                answer.setAttribute('aria-hidden', String(!isActive));
+            });
+        });
+
+        // Cookie preferences
+        const cookieNotice = document.getElementById('cookie-notice');
+        const cookieAccept = document.getElementById('cookie-accept');
+        const cookieReject = document.getElementById('cookie-reject');
+        const cookieSave = document.getElementById('cookie-save');
+        const cookieAnalytics = document.getElementById('cookie-analytics');
+        const cookieMarketing = document.getElementById('cookie-marketing');
+
+        function applyConsent(prefs) {
+            if (typeof gtag === 'function') {
+                gtag('consent', 'update', {
+                    analytics_storage: prefs.analytics ? 'granted' : 'denied',
+                    ad_storage: prefs.marketing ? 'granted' : 'denied'
+                });
+            }
+        }
+
+        function savePrefs(prefs) {
+            try {
+                localStorage.setItem('cookiePrefs', JSON.stringify(prefs));
+            } catch (error) {
+                // Ignore storage errors
+            }
+        }
+
+        function hideCookieNotice() {
+            if (cookieNotice) {
+                cookieNotice.style.display = 'none';
+            }
+        }
+
+        if (cookieNotice) {
+            try {
+                const storedPrefs = localStorage.getItem('cookiePrefs');
+                if (storedPrefs) {
+                    const prefs = JSON.parse(storedPrefs);
+                    if (cookieAnalytics) cookieAnalytics.checked = !!prefs.analytics;
+                    if (cookieMarketing) cookieMarketing.checked = !!prefs.marketing;
+                    applyConsent({
+                        analytics: !!prefs.analytics,
+                        marketing: !!prefs.marketing
+                    });
+                    hideCookieNotice();
+                }
+            } catch (error) {
+                // Ignore storage errors and show the notice
+            }
+        }
+
+        if (cookieAccept) {
+            cookieAccept.addEventListener('click', () => {
+                const prefs = { analytics: true, marketing: true };
+                if (cookieAnalytics) cookieAnalytics.checked = true;
+                if (cookieMarketing) cookieMarketing.checked = true;
+                savePrefs(prefs);
+                applyConsent(prefs);
+                hideCookieNotice();
+            });
+        }
+
+        if (cookieReject) {
+            cookieReject.addEventListener('click', () => {
+                const prefs = { analytics: false, marketing: false };
+                if (cookieAnalytics) cookieAnalytics.checked = false;
+                if (cookieMarketing) cookieMarketing.checked = false;
+                savePrefs(prefs);
+                applyConsent(prefs);
+                hideCookieNotice();
+            });
+        }
+
+        if (cookieSave) {
+            cookieSave.addEventListener('click', () => {
+                const prefs = {
+                    analytics: !!(cookieAnalytics && cookieAnalytics.checked),
+                    marketing: !!(cookieMarketing && cookieMarketing.checked)
+                };
+                savePrefs(prefs);
+                applyConsent(prefs);
+                hideCookieNotice();
             });
         }
     </script>
