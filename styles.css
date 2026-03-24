@@ -126,6 +126,54 @@ nav a:hover {
     opacity: 1;
 }
 
+.nav-menu a.nav-cta {
+    background-color: var(--champagne);
+    color: var(--olive);
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    font-weight: bold;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    position: relative;
+    animation: navCtaPulse 2.6s ease-in-out infinite;
+}
+
+.nav-menu a.nav-cta::after {
+    display: none;
+}
+
+.nav-menu a.nav-cta::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 999px;
+    border: 2px solid rgba(250, 231, 201, 0.6);
+    opacity: 0;
+    animation: navCtaRing 2.6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes navCtaPulse {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+    45% {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.24);
+    }
+}
+
+@keyframes navCtaRing {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    45% {
+        opacity: 0.75;
+        transform: scale(1.06);
+    }
+}
+
 .hero {
     height: 90vh;
     background: linear-gradient(rgba(111, 97, 52, 0.5), rgba(111, 97, 52, 0.5)), 
@@ -600,10 +648,9 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-.whatsapp-btn svg {
-    width: 20px;
-    height: 20px;
-    display: block;
+.whatsapp-btn .whatsapp-icon {
+    width: 18px;
+    height: 18px;
 }
 
 .call-btn {
@@ -879,16 +926,123 @@ footer {
     z-index: 1000;
     transition: transform 0.3s;
     line-height: 0;
+    animation: whatsappPulse 1.6s ease-in-out infinite;
+    isolation: isolate;
+    border: none;
+    padding: 0;
+    overflow: visible;
+    font: inherit;
 }
 
 .mobile-whatsapp:hover {
     transform: scale(1.1);
 }
 
-.mobile-whatsapp svg {
-    width: 28px;
-    height: 28px;
+.whatsapp-icon {
+    background-color: white;
+    color: #25D366;
+    border-radius: 50%;
+    padding: 4px;
+    box-sizing: content-box;
     display: block;
+}
+
+.mobile-whatsapp .whatsapp-icon {
+    width: 26px;
+    height: 26px;
+}
+
+.whatsapp-btn .whatsapp-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.mobile-whatsapp::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(37, 211, 102, 0.45) 0%, rgba(37, 211, 102, 0) 65%);
+    opacity: 0;
+    animation: whatsappGlow 1.6s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes whatsappPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    40% {
+        transform: scale(1.22);
+        box-shadow: 0 0 30px rgba(37, 211, 102, 0.8), 0 14px 30px rgba(0,0,0,0.28);
+    }
+    60% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes whatsappGlow {
+    0%, 100% {
+        opacity: 0.2;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
+
+.mobile-whatsapp::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 72px;
+    top: 50%;
+    transform: translateY(-50%) translateX(8px);
+    background: #1f9e52;
+    color: white;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-whatsapp:hover::before,
+.mobile-whatsapp:focus-visible::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.mobile-whatsapp:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mobile-whatsapp,
+    .mobile-whatsapp::after,
+    .mobile-whatsapp::before {
+        animation-duration: 6s;
+    }
+
+    .nav-menu a.nav-cta,
+    .nav-menu a.nav-cta::before {
+        animation-duration: 6s;
+    }
+
+    .mobile-whatsapp {
+        box-shadow: 0 0 18px rgba(37, 211, 102, 0.55), 0 8px 18px rgba(0,0,0,0.2);
+    }
+
+    .mobile-whatsapp::after {
+        opacity: 0.45;
+        transform: scale(1.05);
+    }
 }
 
 .mobile-cta {
@@ -1013,7 +1167,6 @@ footer {
 .cookie-btn.ghost {
     background-color: transparent;
 }
-}
 
 @media (max-width: 768px) {
     .nav-toggle {
@@ -1035,6 +1188,13 @@ footer {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    .nav-menu a.nav-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.4rem auto;
     }
 
     .nav-toggle.active span:nth-child(1) {
